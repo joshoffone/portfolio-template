@@ -1,17 +1,49 @@
-:root { color-scheme: light dark; --w: 900px; }
-*{box-sizing:border-box} body{font:16px/1.6 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0}
-.nav{display:flex;gap:12px;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid #e5e5e5}
-.nav a{text-decoration:none;padding:6px 10px;border-radius:8px}
-.nav a.active,.nav a:hover{background:rgba(127,127,127,.15)}
-#themeToggle{margin-left:auto}
-.hero{max-width:var(--w);margin:24px auto;text-align:center;padding:24px}
-.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 12px}
-.tagline{opacity:.8}
-.grid{max-width:var(--w);margin:24px auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;padding:0 16px}
-.card{padding:16px;border:1px solid #e5e5e5;border-radius:12px;background:#fff}
-.stack{max-width:600px;margin:24px auto;padding:0 16px}
-form{display:grid;gap:12px}
-label{display:grid;gap:6px}
-input,textarea,button{font:inherit;padding:10px;border:1px solid #ccc;border-radius:8px}
-button{cursor:pointer}
-@media (prefers-color-scheme: dark){ .card{background:#111;border-color:#333} }
+:root {
+  color-scheme: light dark;
+  --w: 900px;
+
+  /* Purple theme colors */
+  --primary-color: #8b5cf6;       /* purple text / buttons */
+  --border-color: #8b5cf6;        /* purple borders */
+  --bg-light: #ffffff;            /* light mode background */
+  --bg-dark: #1a1a1a;             /* dark mode background */
+  --text-light: #111111;
+  --text-dark: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.6 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg-light);
+  color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+}
+
+.nav a.active,
+.nav a:hover {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+#themeTog
+
