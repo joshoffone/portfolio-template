@@ -2,13 +2,13 @@
   /* Theme colors */
   --bg-light: #ffffff;
   --bg-dark: #1a1a1a;
-  --text-color: #ffffff;
+  --text-color: #ff7f50; /* Orange text */
 
   /* Border colors */
   --border-orange: #ff7f50;
   --border-purple: #8b5cf6;
 
-  /* Primary spacing */
+  /* Max width for content */
   --max-width: 800px;
 }
 
@@ -19,6 +19,7 @@ body {
   text-align: center;
   padding: 20px;
   transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color);
 }
 
 /* Navigation / header */
@@ -42,7 +43,7 @@ body {
 }
 
 .nav a:hover, .nav button:hover {
-  background: rgba(255, 127, 80, 0.2); /* soft orange hover */
+  background: rgba(255, 127, 80, 0.2);
 }
 
 /* Hero section */
@@ -76,6 +77,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   transition: background 0.3s, border-color 0.3s, color 0.3s;
+  color: var(--text-color);
 }
 
 /* Button */
@@ -92,7 +94,7 @@ button {
 }
 
 button:hover {
-  background: rgba(139, 92, 246, 0.2); /* soft purple hover */
+  background: rgba(139, 92, 246, 0.2);
 }
 
 /* Light mode */
@@ -118,4 +120,3 @@ body.dark-mode .card {
   border-color: var(--border-orange);
   color: var(--text-color);
 }
-
