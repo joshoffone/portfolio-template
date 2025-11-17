@@ -51,6 +51,21 @@ body {
   margin: 24px auto;
   padding: 24px;
 }
+/* API section */
+.api {
+  max-width:800px;
+  margin:32px auto;
+  padding:16px auto;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 20px var(--shadow);
+  text-align: center;
+  transition: transform var(--transition);
+}
+.api:hover {
+  transform:translateY(-4px);
+}
 
 .avatar {
   width: 120px;
