@@ -1,58 +1,56 @@
 :root {
-  color-scheme: light dark;
-  --w: 900px;
+  /* Theme colors */
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --text-color: #ffffff;
 
-  /* Purple theme colors */
-  --primary-color: #8b5cf6;       /* purple text / buttons */
-  --border-color: #8b5cf6;        /* purple borders */
-  --bg-light: #ffffff;            /* light mode background */
-  --bg-dark: #1a1a1a;             /* dark mode background */
-  --text-light: #111111;
-  --text-dark: #f0f0f0;
+  /* Border colors */
+  --border-orange: #ff7f50;
+  --border-purple: #8b5cf6;
+
+  /* Primary spacing */
+  --max-width: 800px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Global styles */
 body {
-  font: 16px/1.6 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-light);
-  color: var(--primary-color);
+  color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  padding: 20px;
 }
 
+/* Navigation / header */
 .nav {
   display: flex;
-  gap: 12px;
-  align-items: center;
   justify-content: center;
+  gap: 12px;
   padding: 12px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-orange);
 }
 
-.nav a {
+.nav a, .nav button {
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 8px;
-  color: var(--primary-color);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-purple);
+  color: var(--text-color);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.nav a.active,
-.nav a:hover {
-  background: rgba(139, 92, 246, 0.15);
+.nav a:hover, .nav button:hover {
+  background: rgba(255, 127, 80, 0.2); /* soft orange hover */
 }
 
-#themeToggle {
-  margin-left: auto;
-}
-
+/* Hero section */
 .hero {
-  max-width: var(--w);
+  max-width: var(--max-width);
   margin: 24px auto;
-  text-align: center;
   padding: 24px;
 }
 
@@ -63,76 +61,63 @@ body {
   object-fit: cover;
   display: block;
   margin: 0 auto 12px;
+  border: 2px solid var(--border-purple);
 }
 
 .tagline {
   opacity: 0.8;
 }
 
-.grid {
-  max-width: var(--w);
-  margin: 24px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  padding: 0 16px;
-}
-
+/* Card for trivia/facts */
 .card {
-  padding: 16px;
-  border: 1px solid var(--border-color);
+  padding: 20px;
   border-radius: 12px;
-  background: var(--bg-light);
-  color: var(--primary-color);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.stack {
+  border: 3px solid var(--border-orange);
+  margin-top: 16px;
   max-width: 600px;
-  margin: 24px auto;
-  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  transition: background 0.3s, border-color 0.3s;
 }
 
-form {
-  display: grid;
-  gap: 12px;
-}
-
-label {
-  display: grid;
-  gap: 6px;
-}
-
-input,
-textarea,
 button {
-  font: inherit;
-  padding: 10px;
-  border: 1px solid var(--border-color);
+  margin-top: 12px;
+  padding: 10px 16px;
+  font-size: 1rem;
   border-radius: 8px;
-  color: var(--primary-color);
-  background: var(--bg-light);
-}
-
-button {
+  border: 2px solid var(--border-purple);
+  background: transparent;
+  color: var(--text-color);
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-dark);
-    color: var(--primary-color);
-  }
-  .card,
-  input,
-  textarea,
-  button {
-    background-color: #2c1e4f; /* slightly darker purple-ish background */
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-  }
-  .nav a {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-  }
+button:hover {
+  background: rgba(139, 92, 246, 0.2); /* soft purple hover */
+}
+
+/* Light/Dark toggle */
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+body.light-mode .card {
+  background-color: #f2f2f2;
+  border-color: var(--border-orange);
+  color: var(--text-color);
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+}
+
+body.dark-mode .card {
+  background-color: #2c1e4f; /* dark purple background */
+  border-color: var(--border-orange);
+  color: var(--text-color);
 }
