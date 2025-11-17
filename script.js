@@ -1,13 +1,12 @@
 
 // Simple API fetch demo (AJAX)
-(async () => {
-  const el = document.getElementById('quote');
-  if (!el) return;
-  try {
-    const res = await fetch('https://dailyverses.net/random-bible-verse');
-    const data = await res.json();
-    el.textContent = `"${data.content}" — ${data.author}`;
-  } catch {
-    el.textContent = 'Could not load quote.';
-  }
-})();
+const url = 'https://labs.bible.org/api/?passage=random&type=json';
+
+async function fetchRandomVerse() {
+  const res = await fetch(url);
+  const data = await res.json();
+  const verse = data[0]; // first element
+  console.log(`${verse.bookname} ${verse.chapter}:${verse.verse} - ${verse.text}`);
+}
+
+fetchRandomVerse();
