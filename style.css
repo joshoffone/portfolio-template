@@ -1,10 +1,7 @@
 :root {
-  /* Theme colors */
-  --bg-light: #ffffff;       /* Light background */
-  --bg-dark: #1a1a1a;        /* Dark background */
-  --text-color: #ff7f50;     /* Orange text */
-
-  /* Border colors */
+  /* Colors */
+  --bg: #000000;            /* Black background */
+  --text-color: #ff7f50;    /* Orange text */
   --border-orange: #ff7f50;
   --border-purple: #8b5cf6;
 
@@ -18,9 +15,8 @@ body {
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
   padding: 20px;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg);
   color: var(--text-color);
-  background-color: var(--bg-light); /* default light */
 }
 
 /* Navigation / header */
@@ -32,18 +28,17 @@ body {
   border-bottom: 2px solid var(--border-orange);
 }
 
-.nav a, .nav button {
+.nav a {
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 8px;
   border: 2px solid var(--border-purple);
   color: var(--text-color);
   background: transparent;
-  cursor: pointer;
   transition: background 0.3s;
 }
 
-.nav a:hover, .nav button:hover {
+.nav a:hover {
   background: rgba(255, 127, 80, 0.2);
 }
 
@@ -63,9 +58,8 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  background-color: var(--bg);
   color: var(--text-color);
-  background-color: var(--bg-light); /* default */
 }
 
 /* Button */
@@ -83,28 +77,4 @@ button {
 
 button:hover {
   background: rgba(139, 92, 246, 0.2);
-}
-
-/* Light mode */
-body.light-mode {
-  background-color: var(--bg-light);
-  color: var(--text-color);
-}
-
-body.light-mode .card {
-  background-color: #f2f2f2;
-  border-color: var(--border-orange);
-  color: var(--text-color);
-}
-
-/* Dark mode */
-body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-color);
-}
-
-body.dark-mode .card {
-  background-color: #2c1e4f; /* dark purple */
-  border-color: var(--border-orange);
-  color: var(--text-color);
 }
