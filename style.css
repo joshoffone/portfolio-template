@@ -16,11 +16,9 @@
 body {
   margin: 0;
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
   text-align: center;
   padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Navigation / header */
@@ -77,11 +75,10 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--bg-dark);
-  color: var(--text-color);
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 
+/* Button */
 button {
   margin-top: 12px;
   padding: 10px 16px;
@@ -98,7 +95,7 @@ button:hover {
   background: rgba(139, 92, 246, 0.2); /* soft purple hover */
 }
 
-/* Light/Dark toggle */
+/* Light mode */
 body.light-mode {
   background-color: var(--bg-light);
   color: var(--text-color);
@@ -121,3 +118,4 @@ body.dark-mode .card {
   border-color: var(--border-orange);
   color: var(--text-color);
 }
+
