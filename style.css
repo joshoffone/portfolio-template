@@ -70,6 +70,14 @@ body {
   color: var(--text-color);
 }
 
+.api {
+  color: #ff7f50;        /* orange text */
+  border: 2px solid #8b5cf6; /* purple border */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
 /* Button */
 button {
   margin-top: 12px;
