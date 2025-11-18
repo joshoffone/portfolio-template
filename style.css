@@ -49,6 +49,14 @@ body {
   padding: 24px;
 }
 
+.hero h1 {
+  font-family: "Bubblegum Sans", cursive;
+}
+
+.tagline {
+  font-family: "Pacifico", cursive;
+}
+
 /* Card */
 .card {
   padding: 20px;
