@@ -4,28 +4,45 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joshua G • Portfolio</title>
+
+  <!-- Google Fonts for bubble and script -->
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Pacifico&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="nav">
     <a href="./">Home</a>
     <a href="./projects.html">Projects</a>
     <a href="./contact.html">Contact</a>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
-  <img class="avatar" 
-       src="https://assets.golunapark.com/images/19670/2f983f89f2ad48f69896d6605fdbac70_hd.png" 
-       alt="Joshua G" />
- <h1>Welcome to Food Fact Trivia</h1>  <!-- Bubble letters -->
-  <p class="tagline">Programmed by Joshua G</p> <!-- Script font -->
-</header>
-  
+    <img class="avatar" 
+         src="https://assets.golunapark.com/images/19670/2f983f89f2ad48f69896d6605fdbac70_hd.png" 
+         alt="Joshua G" />
+    <h1>Welcome to Food Fact Trivia</h1>  <!-- Bubble letters -->
+    <p class="tagline">Programmed by Joshua G</p> <!-- Script font -->
+  </header>
+
+  <!-- Bible Verse Section -->
   <section class="api">
     <h2>BIBLE VERSE</h2>
     <p id="quote">DAILY WORD</p>
   </section>
 
-  <script src="script.js"></script>
+  <!-- Food Fact Section -->
+  <section class="food-fact-box">
+    <h2>Food Trivia</h2>
+    <p id="foodFactQuestion">Loading...</p>
+    <p id="foodFactAnswer"></p>
+    <button id="foodFactBtn">Get New Food Fact</button>
+  </section>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>  <!-- Bible Verse API -->
+  <script src="foodFact.js"></script> <!-- Food Trivia API -->
 </body>
 </html>
